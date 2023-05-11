@@ -1,0 +1,8 @@
+{
+    "name": "Presenter",
+    "short_name": "Presenter",
+    "icons": [{
+        "src": "favicon.ico",
+        "sizes": "24x24"
+    }]
+}
