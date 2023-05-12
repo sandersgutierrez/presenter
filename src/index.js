@@ -1,22 +1,36 @@
 'use strict'
 
-import './index.css'
+import Reveal from 'reveal.js'
+import RevealMarkdown from 'reveal.js/plugin/markdown/markdown.js'
+import RevealHighlight from 'reveal.js/plugin/highlight/highlight.js'
+import RevealZoom from 'reveal.js/plugin/zoom/zoom.js'
+import 'reveal.js/dist/reveal.css'
+import 'reveal.js/dist/theme/black.css'
+import 'reveal.js/plugin/highlight/monokai.css'
 
-class GreetElement extends HTMLElement {
-    constructor() {
-        super()
-    }
-}
+const reveal = document.createElement('div')
+reveal.classList.add('reveal')
 
-customElements.define('greet-element', GreetElement)
+const slides = document.createElement('div')
+slides.classList.add('slides')
 
-function render() {
-    const h1 = document.createElement('h1')
-    h1.innerText = 'Hello World!'
-    const greetElement = new GreetElement()
-    greetElement.append(h1)
+const slide = `
+<section>
+    <h2>Hello World</h2>
+</section>
+<section>
+    <h2>Hello World</h2>
+</section>
+<section>
+    <h2>Hello World</h2>
+</section>
+`
 
-    document.querySelector('#root').append(greetElement)
-}
+slides.innerHTML += slide
 
-window.addEventListener('DOMContentLoaded', render)
+document.body.appendChild(reveal).appendChild(slides)
+
+let deck = new Reveal({
+    plugins: [RevealZoom, RevealMarkdown, RevealHighlight],
+})
+deck.initialize()
