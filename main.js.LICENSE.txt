@@ -1,0 +1,29 @@
+/*!
+	 * reveal.js Zoom plugin
+	 */
+
+/*!
+	 * zoom.js 0.3 (modified for use with reveal.js)
+	 * http://lab.hakim.se/zoom-js
+	 * MIT licensed
+	 *
+	 * Copyright (C) 2011-2014 Hakim El Hattab, http://hakim.se
+	 */
+
+/*!
+   * The reveal.js markdown plugin. Handles parsing of
+   * markdown inside of presentations as well as loading
+   * of external markdown documents.
+   */
+
+/*!
+   * reveal.js plugin that adds syntax highlight support.
+   */
+
+/*!
+* reveal.js 4.5.0
+* https://revealjs.com
+* MIT licensed
+*
+* Copyright (C) 2011-2023 Hakim El Hattab, https://hakim.se
+*/
