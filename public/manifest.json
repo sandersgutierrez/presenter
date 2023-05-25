@@ -1,6 +1,6 @@
 {
-    "name": "Presenter",
-    "short_name": "Presenter",
+    "name": "Slides Presenter",
+    "short_name": "Slides Presenter",
     "icons": [{
         "src": "favicon.ico",
         "sizes": "24x24"

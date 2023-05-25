@@ -23,13 +23,21 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env'],
+                        presets: [
+                            '@babel/preset-env',
+                            [
+                                '@babel/preset-react',
+                                {
+                                    runtime: 'automatic',
+                                },
+                            ],
+                        ],
                     },
                 },
             },
             {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                test: /\.s[ac]ss$/i,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.svg$/,
@@ -39,17 +47,15 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Presenter',
+            title: 'Slides Presenter',
             meta: {
                 viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
             },
-            template: './src/index.html',
+            template: './public/index.html',
             inject: 'body',
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: 'src/assets', to: path.resolve(__dirname, 'dist') },
-            ],
-        }),
+        // new CopyPlugin({
+        //     patterns: [{ from: 'src/assets', to: path.resolve(__dirname, 'dist') }],
+        // }),
     ],
 }
